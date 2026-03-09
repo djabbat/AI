@@ -1,0 +1,131 @@
+# Виртуальное окружение
+venv/
+env/
+ENV/
+.venv/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Файлы конфигурации с секретами
+*.key
+*.pem
+*.crt
+*.env
+.env.*
+secrets.*
+config.json
+integrations.json
+*.db
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Кэш и данные
+.cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Бэкапы и отчеты
+backups/
+reports/
+search_results/
+trend_reports/
+*.zip
+*.tar
+*.gz
+
+# Базы данных
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Результаты поиска
+_search_*
+_ai_analysis.txt
+_deep_analysis.md
+_todo_analysis.md
+_error_report.txt
+
+# Временные файлы проектов
+projects/temp/
+projects/tmp/
+
+# Локальные конфигурации
+.local/
+.DS_Store
+Thumbs.db
+
+# Системные файлы
+*.so
+*.dll
+*.dylib
+
+# Не добавлять большие файлы
+*.mp4
+*.mp3
+*.avi
+*.mov
+*.mkv
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+*.pdf
+*.epub
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Документация
+docs/_build/
+site/
+
+# Тесты
+tests/__pycache__/
+*.test.py
+_test.*
+
+# Резервные копии
+*.bak
+*.old
+*.orig
+
+# Файлы проекта (сохраняем только код, не данные)
+knowledge/
+projects/__pycache__/
+chroma_db/
+
+# Но сохраняем основные файлы
+!*.py
+!*.md
+!*.txt
+!*.sh
+!*.desktop
+!*.png
+!requirements.txt
+!README.md
+!TODO.md
+!*.json.example
