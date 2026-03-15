@@ -11,7 +11,7 @@ class TrendReporter:
     
     def __init__(self, model="llama3.2"):
         self.model = model
-        self.reports_dir = os.path.expanduser("~/AI/trend_reports")
+        self.reports_dir = os.path.expanduser("~/AIM/trend_reports")
         os.makedirs(self.reports_dir, exist_ok=True)
         self.trend_history = []
         

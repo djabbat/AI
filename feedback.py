@@ -9,7 +9,7 @@ class FeedbackSystem:
     
     def __init__(self, model="llama3.2"):
         self.model = model
-        self.feedback_dir = os.path.expanduser("~/AI/feedback")
+        self.feedback_dir = os.path.expanduser("~/AIM/feedback")
         os.makedirs(self.feedback_dir, exist_ok=True)
         
         # База обратной связи

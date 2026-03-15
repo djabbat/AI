@@ -4,7 +4,7 @@ import os
 from datetime import datetime, timedelta
 
 class ProjectMemory:
-    def __init__(self, memory_file="~/AI/projects_memory.json"):
+    def __init__(self, memory_file="~/AIM/projects_memory.json"):
         self.memory_file = os.path.expanduser(memory_file)
         self.memory = self.load()
     

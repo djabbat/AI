@@ -10,7 +10,7 @@ class IntegrationHub:
     
     def __init__(self):
         self.integrations = {}
-        self.config_dir = os.path.expanduser("~/AI/integrations")
+        self.config_dir = os.path.expanduser("~/AIM/integrations")
         os.makedirs(self.config_dir, exist_ok=True)
         self.load_configs()
     

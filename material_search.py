@@ -10,7 +10,7 @@ import threading
 class MaterialSearcher:
     def __init__(self, model="llama3.2"):
         self.model = model
-        self.results_dir = os.path.expanduser("~/AI/search_results")
+        self.results_dir = os.path.expanduser("~/AIM/search_results")
         os.makedirs(self.results_dir, exist_ok=True)
         self.search_history = []
     

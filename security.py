@@ -228,7 +228,7 @@ class SecurityManager:
         
         return stats
     
-    def save_config(self, filepath="~/AI/security_config.json"):
+    def save_config(self, filepath="~/AIM/security_config.json"):
         """Сохраняет конфигурацию"""
         import json
         
@@ -245,7 +245,7 @@ class SecurityManager:
         
         print(f"✅ Конфигурация сохранена: {filepath}")
     
-    def load_config(self, filepath="~/AI/security_config.json"):
+    def load_config(self, filepath="~/AIM/security_config.json"):
         """Загружает конфигурацию"""
         import json
         

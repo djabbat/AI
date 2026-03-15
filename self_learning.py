@@ -12,7 +12,7 @@ class LearningSystem:
     
     def __init__(self, model="llama3.2"):
         self.model = model
-        self.learning_dir = os.path.expanduser("~/AI/learning")
+        self.learning_dir = os.path.expanduser("~/AIM/learning")
         os.makedirs(self.learning_dir, exist_ok=True)
         
         # База знаний

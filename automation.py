@@ -133,7 +133,7 @@ _secret_*
 class BackupAutomation:
     """Автоматизация бэкапов"""
     
-    def __init__(self, backup_path="~/AI/backups"):
+    def __init__(self, backup_path="~/AIM/backups"):
         self.backup_path = os.path.expanduser(backup_path)
         os.makedirs(self.backup_path, exist_ok=True)
     
@@ -200,7 +200,7 @@ class AutoReporter:
     
     def __init__(self, reporter):
         self.reporter = reporter
-        self.reports_dir = os.path.expanduser("~/AI/reports")
+        self.reports_dir = os.path.expanduser("~/AIM/reports")
         os.makedirs(self.reports_dir, exist_ok=True)
     
     def generate_daily(self):

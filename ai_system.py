@@ -5,7 +5,7 @@ import time
 import threading
 from datetime import datetime
 
-VENV_PATH = os.path.expanduser("~/AI/venv/lib/python3.*/site-packages")
+VENV_PATH = os.path.expanduser("~/AIM/venv/lib/python3.*/site-packages")
 import glob
 site_packages = glob.glob(VENV_PATH)
 if site_packages:
@@ -14,13 +14,13 @@ if site_packages:
 try:
     import ollama
 except ImportError:
-    print("❌ Ollama не установлен. Запустите: source ~/AI/venv/bin/activate && pip install ollama")
+    print("❌ Ollama не установлен. Запустите: source ~/AIM/venv/bin/activate && pip install ollama")
     sys.exit(1)
 
 class AISystem:
     def __init__(self):
-        self.root = os.path.expanduser("~/AI")
-        self.desktop = os.path.expanduser("~/Documents")
+        self.root = os.path.expanduser("~/AIM")
+        self.desktop = os.path.expanduser("~/AIM/Patients")
         self.projects = {}
         self.running = True
         self.model = "llama3.2"
@@ -281,7 +281,7 @@ class AISystem:
         path = input("\nВведите путь к проекту: ").strip()
         if os.path.exists(path):
             print(f"\n🔍 Анализ проекта: {path}")
-            os.system(f"python3 todo_analyzer.py '{path}' 2>/dev/null || python3 ~/AI/todo_analyzer.py '{path}'")
+            os.system(f"python3 todo_analyzer.py '{path}' 2>/dev/null || python3 ~/AIM/todo_analyzer.py '{path}'")
         else:
             print("❌ Путь не существует")
     

@@ -7,7 +7,7 @@ from collections import Counter
 class ReportGenerator:
     """Генератор отчетов по проектам"""
     
-    def __init__(self, projects_path="~/Documents", memory=None):
+    def __init__(self, projects_path="~/AIM/Patients", memory=None):
         self.projects_path = os.path.expanduser(projects_path)
         self.memory = memory
     
@@ -40,7 +40,7 @@ class ReportGenerator:
                     report.append(f"- {proj}")
         
         # Сохраняем отчет
-        report_path = os.path.expanduser(f"~/AI/reports/daily_{datetime.now().strftime('%Y%m%d')}.md")
+        report_path = os.path.expanduser(f"~/AIM/reports/daily_{datetime.now().strftime('%Y%m%d')}.md")
         os.makedirs(os.path.dirname(report_path), exist_ok=True)
         
         with open(report_path, 'w', encoding='utf-8') as f:
@@ -89,7 +89,7 @@ class ReportGenerator:
             for proj in changed[:10]:
                 report.append(f"- {proj}")
         
-        report_path = os.path.expanduser(f"~/AI/reports/weekly_{datetime.now().strftime('%Y%W')}.md")
+        report_path = os.path.expanduser(f"~/AIM/reports/weekly_{datetime.now().strftime('%Y%W')}.md")
         os.makedirs(os.path.dirname(report_path), exist_ok=True)
         
         with open(report_path, 'w', encoding='utf-8') as f:
@@ -213,7 +213,7 @@ class ReportGenerator:
             report.append(f"- {name}: {score} очков активности")
         
         # Сохраняем отчет
-        report_path = os.path.expanduser(f"~/AI/reports/statistics_{datetime.now().strftime('%Y%m%d')}.md")
+        report_path = os.path.expanduser(f"~/AIM/reports/statistics_{datetime.now().strftime('%Y%m%d')}.md")
         os.makedirs(os.path.dirname(report_path), exist_ok=True)
         
         with open(report_path, 'w', encoding='utf-8') as f:
@@ -223,7 +223,7 @@ class ReportGenerator:
     
     def list_reports(self):
         """Показывает все доступные отчеты"""
-        reports_dir = os.path.expanduser("~/AI/reports")
+        reports_dir = os.path.expanduser("~/AIM/reports")
         
         if not os.path.exists(reports_dir):
             print("📭 Нет сохраненных отчетов")

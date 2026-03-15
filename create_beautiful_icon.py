@@ -72,13 +72,13 @@ def create_beautiful_icon():
     img = img.filter(ImageFilter.GaussianBlur(radius=1))
     
     # Сохраняем
-    icon_path = os.path.expanduser("~/AI/ai_icon.png")
+    icon_path = os.path.expanduser("~/AIM/ai_icon.png")
     img.save(icon_path, "PNG", quality=95)
     print(f"✅ Красивая иконка создана: {icon_path}")
     
     # Создаем также маленькую версию для меню
     small = img.resize((64, 64), Image.Resampling.LANCZOS)
-    small.save(os.path.expanduser("~/AI/ai_icon_small.png"), "PNG", quality=95)
+    small.save(os.path.expanduser("~/AIM/ai_icon_small.png"), "PNG", quality=95)
 
 def create_animated_icon():
     """Создает анимированную версию иконки (опционально)"""
@@ -102,7 +102,7 @@ def create_animated_icon():
         
         # Сохраняем как GIF
         if frames:
-            gif_path = os.path.expanduser("~/AI/ai_icon_animated.gif")
+            gif_path = os.path.expanduser("~/AIM/ai_icon_animated.gif")
             frames[0].save(
                 gif_path,
                 save_all=True,
